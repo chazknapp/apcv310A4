@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Understanding Land Cover Changes with GIS</title>
+    <link rel="stylesheet" type="text/css" href="project1.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <h1>Understanding Land Cover Changes with GIS</h1>
+    <h2>Project Overview</h2>
+    <p>As I continue learning Python for coding and HTML & CSS for web development, Ive envisioned a project that brings together 
+        my passion for GIS and maps while making these tools more accessible to those without a technical background. The goal is to develop a 
+        Python-based web application that allows users to explore land cover changes over time through unsupervised classification of raster images.</p>
+    
+    <p>Users would be guided on how to obtain satellite imagery for two different years and upload the files to the system. The application would then 
+        process the images, apply an unsupervised classification, and generate two visual outputs. These classified images would highlight land cover 
+        changes, and users would be able to hover over the images to compare differences. Additionally, the system would provide statistical insights on 
+        areas of land loss, growth, or stability over time.</p>
+    
+    <h3>How This Works</h2>
+    <p>The platform will include step-by-step instructions on how to obtain satellite data using Earth Explorer, explaining which spectral bands are 
+        required and how they contribute to NDVI (Normalized Difference Vegetation Index) analysis. It will also offer a breakdown of the classification 
+        process and how to interpret the statistics, helping users understand land cover changes in a meaningful way.</p>
+    
+    <h3>Interactive Map Placeholder</h2>
+    <p>Since I havent fully developed the classification tool yet, I decided to embed an interactive map as a learning exercise. This serves as a practice 
+        step in understanding how to link live maps to a web page and will eventually be replaced by the classification results. Currently, the map is centered on Arkansas, my home state, 
+        as a starting point for exploration.
+
+        My long-term goal is to build this project into a user-friendly tool that helps bridge the gap between beginner-level geography understanding and the advanced analytical power of GIS, 
+        making geographic research more engaging and accessible.</p>
+    
+    <div id="map"></div>
+   
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHJfZQivd1JeZFWTMptJsmP-Zgp6NJPtriFJQ0WJVrUknksh_08aRURSvBeK7YFXrEsQiLckhuZ3E-tdcJ4g-SSKqug5ck3CF0UNziOg8ftlQlRl7t3u2dgXbUaNo7mzp8apPxCA/s320/Fig2_new.png">
+    
+    <p><a href="index.html">Home</a></p>
+    
+    <script>
+        var map = L.map('map').setView([34.7465, -92.2896], 7);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+    </script>
+</body>
+</html>
